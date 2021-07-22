@@ -39,6 +39,9 @@ You can see below code, these are minimum and mandatory calls to enable payment 
                 .setPaymentToken(paymentToken)
                 .setEnvironment(OpenPayment.Environment.SANDBOX)
                 .setAccessKey(accessKey)
+                .setColor(colorHexCode)   // Add your Color Hex Code here
+	            .setErrorColor(errorColorHexCode).  // Add your Error Color Hex Code here
+	            .setLogoUrl(logoURL)  // Add your Logo URL here
                 .build()
 ```
 
@@ -50,6 +53,9 @@ You can see below code, these are minimum and mandatory calls to enable payment 
 |setPaymentToken()|✔|To create the token using Create Payment Token API.|
 |setAccessKey()|✔| Access key is a unique key which you can generate from your Open dashboard.|
 |setEnvironment()|✔| Following ENUM can be passed to this method. `OpenPayment.Environment.SANDBOX`  `OpenPayment.Environment.LIVE`|
+|setColor()| |Main color of Layer will be changed to this . Example: #f8c5c5|
+|setErrorColor()| | Error color (icons/ error lines / error messages) of Layer will be changed to this . Example: #83025c|
+|setLogoUrl()| | Logo is changed to image source passed.|
 |build()|✔|It will build and returns the OpenPayment instance.|
 
 # Proceed to Payment 
